@@ -12,9 +12,10 @@ contract SmartContract
     // Le nombre minimal de "monnaie" que le contrat peut recevoir à la création.
     uint8 public constant decimals = 18;
 
-    uint256 totalSupply;
+    uint256 public totalSupply;
 
     event Transfer(address indexed you, address indexed receiver, uint256 amount);
+    event Log(uint256 number);
 
     constructor (uint256 initialSupply, address owner) public
     {
@@ -40,6 +41,7 @@ contract SmartContract
     * On appelle Transfer 
     */
     function sendAmount(address receiver, uint256 amount) public returns (bool) {
+        emit Log(amount);
         require(receiver != address(0), "Pas de dédoublement de personnalité");
         require(amount <= getBalanceOf(msg.sender), "Pas assez de flouze");
 
