@@ -196,6 +196,20 @@ let EnhancedTableToolbar = props => {
 
 EnhancedTableToolbar = withStyles(toolbarStyles)(EnhancedTableToolbar);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const descr = "Description très longue et inutilement ennuyante dans le seul but de donner un peu de consistence à ce dialog, en espérant que vous passiez un bon moment, sinon il fait super beau c'est dommage que les Gilets Jaunes soi...";
 
 class EnhancedTable extends React.Component {
@@ -223,6 +237,16 @@ class EnhancedTable extends React.Component {
     page: 0,
     rowsPerPage: 10,
   };
+
+  // componentDidMount() {
+  //     const { drizzle, drizzleState } = this.props;
+  //     console.log(drizzle);
+  //     console.log(drizzleState)
+  //     const contract = drizzle.contracts.DAVE;
+  //     var dataKey = contract.methods["lawList"].cacheCall();
+  //     console.log(dataKey)
+  //     this.setState({ dataKey });
+  // }
 
   handleNewLawOpen = () => {
     this.setState({ open2: true })

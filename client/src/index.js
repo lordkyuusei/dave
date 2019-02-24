@@ -5,10 +5,10 @@ import App from "./App";
 
 // import drizzle functions and contract artifact
 import { Drizzle, generateStore } from "drizzle";
-import SmartContract from "./contracts/SmartContract";
+import DAVE from "./contracts/DAVE";
 
 // let drizzle know what contracts we want
-const options = { contracts: [SmartContract] };
+const options = { contracts: [DAVE] };
 
 // setup the drizzle store and drizzle
 const drizzleStore = generateStore(options);

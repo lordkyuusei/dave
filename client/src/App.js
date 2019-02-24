@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import ReadSmartContract from "./ReadSmartContract";
-import SetSmartContract from "./SetSmartContract";
 import ListingLaws from "./ListingLaws"
 import './App.css';
 
@@ -27,7 +25,10 @@ class App extends Component {
     if (this.state.loading) return "Loading Drizzle...";
     return (
       <div className="App">
-        <ListingLaws />
+        <ListingLaws
+          drizzle={this.props.drizzle}
+          drizzleState={this.state.drizzleState}
+        />
       </div>
     );
   }
